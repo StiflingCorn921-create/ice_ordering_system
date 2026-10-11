@@ -1,12 +1,7 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$dbname = 'icybiz';
-
-$conn = new mysqli($host, $user, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Database Connection Failed: " . $conn->connect_error);
-}
-?>
+/**
+ * Legacy db.php adapter
+ * Proxies to new PDO database connection in app/
+ */
+require_once __DIR__ . '/app/bootstrap.php';
+$pdo = db();

@@ -1,0 +1,45 @@
+/* Shared styles for all pages */
+:root {
+    --ice-blue: #0d6efd;
+    --ice-light: #e7f1ff;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer { margin-top: auto; }
+
+/* Chat widget (customer + admin) */
+.chat-log {
+    max-height: 320px;
+    min-height: 60px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.chat-msg {
+    padding: .5rem .75rem;
+    border-radius: 1rem;
+    max-width: 90%;
+    white-space: pre-wrap;
+    font-size: .9rem;
+}
+
+.chat-user {
+    align-self: flex-end;
+    background: var(--ice-blue);
+    color: #fff;
+    border-bottom-right-radius: .25rem;
+}
+
+.chat-bot {
+    align-self: flex-start;
+    background: var(--bs-secondary-bg, #f1f3f5);
+    border-bottom-left-radius: .25rem;
+}
+
